@@ -138,4 +138,157 @@ function rotateArr(arr){
     tempArr.push(firstEl)
     console.log(tempArr)
 }
-rotateArr(arr10)
+// rotateArr(arr10)
+
+// 11. Find the Index of an Element
+const arr11 = [4, 10, 2, 8, 12, 15, 2, 19, 45, 3, 55];
+function findIndex(arr, num){
+    let idx = 0;
+    for(let i = 0; i < arr.length; i++){
+        idx++
+        if(arr[i] == num){
+            break
+        }
+        if(idx == arr.length){
+            idx = -1
+        }
+    }
+    console.log(idx)
+}
+// findIndex(arr11, 19)
+
+
+// 12. Insert Element at a Specific Index
+const arr12 = [1, 2, 3, 4, 5]
+function insertNum(arr, idx, num){
+    let temparr = []
+    for(let i = 0; i < arr.length; i++){
+        temparr.push(arr[i])
+        if(i == idx){
+            temparr.push(num)
+        }
+    }
+    console.log(temparr)
+}
+// insertNum(arr12, 4, 10)
+
+// 13. Remove All Occurrences of an Element
+const arr13 = [1, 2, 2, 3]
+function filterNum(arr, num){
+    let tempArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] == num){
+            
+        }else {
+            tempArr.push(arr[i])
+        }
+    }
+    console.log(tempArr)
+}
+// filterNum(arr13, 2)
+
+// 14. Check if Two Arrays are Equal
+const arr14_1 = [1,2,3]
+const arr14_2 = [1,2,3]
+function checkEqual(arr1, arr2){
+    let state = false
+    if(arr1.length !== arr2.length){
+        return state = false
+    }
+    for(let i = 0; i < arr1.length; i++){
+        if(arr1[i] == arr2[i]){
+            state = true
+        }else {
+            state = false
+        }
+    }
+    return state
+}
+// const d = checkEqual(arr14_1, arr14_2)
+// console.log(d)
+
+// 15. Find All Even Numbers
+const arr15 = [1, 2, 3, 4]
+function findEven(arr){
+    let tempArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 == 0){
+            tempArr.push(arr[i])
+        }
+    }
+    console.log(tempArr)
+}
+// findEven(arr15)
+
+// 16. Find the Frequency of a Target Element
+const arr16 = [1, 2, 2, 3, 2,2,3,3,5,4,5,6,5,42,1,1,]
+function findNumCount(arr, ele){
+    let count = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] == ele){
+            count++
+        }
+    }
+    console.log(count)
+}
+// findNumCount(arr16, 1)
+
+// 17. Move Zeros to End [0, 1, 0, 3, 0] → [1, 3, 0, 0, 0]
+const arr17 = [0, 1, 0, 3, 0]
+function moveZero(arr){
+    let tempArr = []
+    let zerArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] !== 0){
+            tempArr.push(arr[i])
+        }else {
+            zerArr.push(arr[i])
+        }
+    }
+    let d = tempArr.concat(zerArr)
+    console.log(d)
+}
+// moveZero(arr17)
+
+// 18. Find the Missing Number (0 to n) [0, 1, 3] → 2
+const arr18 = [1, 2, 5, 4, 6, 8, 7];
+function findMissingNumber(arr) {
+    const n = arr.length + 1;
+    const sumOfFirstN = (n * (n + 1)) / 2;
+
+    let sumOfArray = 0;
+    for (let i = 0; i < n - 1; i++) {
+        sumOfArray = sumOfArray + arr[i];
+    }
+
+    let missingNumber = sumOfFirstN - sumOfArray;
+
+    console.log(missingNumber)
+}
+// findMissingNumber(arr18);
+
+// 19. Print all possible contiguous subarrays of array.
+const arr19 = [1, 2];
+function printSubArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i; j < arr.length; j++) {
+            console.log(arr.slice(i, j + 1));
+        }
+    }
+}
+// printSubArray(arr19);
+
+// 20. Check if Array is a Palindrome
+const arr20 = [1, 2, 3, 2, 1]
+function checkPalindrome(arr){
+    let state = false
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] == arr[arr.length - 1 - i]){
+            state = true
+        }else {
+            state = false
+        }
+    }
+    console.log(state)
+}
+checkPalindrome(arr20)

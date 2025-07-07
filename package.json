@@ -1,0 +1,23 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "HEY This is Rehan.",
+  "main": "array.js",
+  "scripts": {
+    "dev": "nodemon array.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehanulHaque/questions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehanulHaque/questions/issues"
+  },
+  "homepage": "https://github.com/rehanulHaque/questions#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
